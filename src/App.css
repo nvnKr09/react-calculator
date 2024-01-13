@@ -1,5 +1,5 @@
 .calculator-container {
-  width: 380px;
+  width: 489px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -13,11 +13,11 @@
     -28px 20px 60px 1px rgba(251, 24, 78, 0.47);
 }
 .calculator-container input {
-  height: 30px;
+  height: 50px;
   border: 2px solid;
   outline: none;
   padding: 8px 14px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   &&::placeholder {
     color: black;
@@ -37,8 +37,8 @@
   justify-content: space-between;
 }
 .button {
-  height: 40px;
-  width: 40px;
+  height: 61px;
+  width: 61px;
   border: none;
   display: flex;
   align-items: center;
@@ -47,20 +47,38 @@
   color: #fff;
   background: black;
 }
+.error,
+.success,
+.error + p,
+.success + p {
+  font-size: 24px;
+}
 .error {
   color: #fb184e;
   margin-bottom: 1rem;
 }
 .success {
-  color: #0057ff;
+  color: green;
   margin-bottom: 1rem;
 }
-@media screen and (max-width: 426px) {
+/* media screen css */
+@media screen and (max-width: 769px) {
   .calculator-container {
-    width: 300px;
-    gap: 1.5rem;
+    scale: 0.8;
   }
-  .calculator-container > h1 {
-    font-size: 26px;
+}
+@media screen and (max-width: 348px) {
+  .calculator-container {
+    scale: 0.8;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .button {
+    scale: 0.8;
+  }
+  .error,
+  .error + p {
+    font-size: 20px;
   }
 }
