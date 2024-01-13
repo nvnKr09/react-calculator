@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
 
@@ -52,7 +53,6 @@ function App() {
   }
 
   return (
-    <div className="App">
       <div className="calculator-container">
         <h1>React Calculator</h1>
         <input
@@ -101,12 +101,11 @@ function App() {
           {status && (
             <div>
               {status === "Error!" ? (<p className="error">{status}</p>) : (<p className="success">{status}</p>)}
-              {message ? (<p>{message}</p>) : (<p>Result - {result}</p>)}
+              {message ? (<p>{message}</p>) : (<p>Result : {result}</p>)}
             </div>
           )}
         </div>
       </div>
-    </div>
   );
 }
 
